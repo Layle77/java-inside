@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="src/main/java/fr.umlv.javainside.labOne"/>
+	<classpathentry kind="src" path="src/test/java/fr.umlv.javainside.labOne"/>
+	<classpathentry kind="src" path="target/test/merged/fr.umlv.javainside.labOne"/>
+	<classpathentry kind="lib" path="deps/org.apiguardian.api.jar"/>
+	<classpathentry kind="lib" path="deps/org.junit.jupiter.api.jar"/>
+	<classpathentry kind="lib" path="deps/org.junit.platform.commons.jar"/>
+	<classpathentry kind="lib" path="deps/org.opentest4j.jar"/>
+	<classpathentry kind="lib" path="target/deps/maven-local/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.jar"/>
+	<classpathentry kind="lib" path="target/deps/maven-local/org/junit/jupiter/junit-jupiter-api/5.2.0/junit-jupiter-api-5.2.0.jar"/>
+	<classpathentry kind="lib" path="target/deps/maven-local/org/junit/platform/junit-platform-commons/1.2.0/junit-platform-commons-1.2.0.jar"/>
+	<classpathentry kind="lib" path="target/deps/maven-local/org/opentest4j/opentest4j/1.1.0/opentest4j-1.1.0.jar"/>
+	<classpathentry kind="lib" path="target/main/artifact-doc/fr.umlv.javainside.labOne-doc-1.0.jar"/>
+	<classpathentry kind="lib" path="target/main/artifact-src/fr.umlv.javainside.labOne-source-1.0.jar"/>
+	<classpathentry kind="lib" path="target/main/artifact/fr.umlv.javainside.labOne-1.0.jar"/>
+	<classpathentry kind="lib" path="target/test/artifact/test-fr.umlv.javainside.labOne-1.0.jar"/>
+	<classpathentry kind="output" path="target/main/exploded/fr.umlv.javainside.labOne"/>
+</classpath>
