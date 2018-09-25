@@ -1,0 +1,1 @@
+moduleSearchIndex = [{"l":"fr.umlv.javainside.labOne"}]
