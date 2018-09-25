@@ -1,0 +1,2 @@
+export PATH=$PATH:/home/ens/forax/java-inside/pro-jdk-11/bin
+export PATH=$PATH:/home/ens/forax/java-inside/eclipse
