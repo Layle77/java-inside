@@ -11,6 +11,8 @@
 	<classpathentry kind="lib" path="java-inside/lab1/deps/org.junit.jupiter.api.jar"/>
 	<classpathentry kind="lib" path="java-inside/lab1/deps/org.junit.platform.commons.jar"/>
 	<classpathentry kind="lib" path="java-inside/lab1/deps/org.opentest4j.jar"/>
+	<classpathentry kind="lib" path="java-inside/lab1/deps/org.openjdk.jmh.generator.jar"/>
+	<classpathentry kind="lib" path="java-inside/lab1/deps/org.openjdk.jmh.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
