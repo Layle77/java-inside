@@ -1,0 +1,6 @@
+Git :
+
+git init
+git add .
+git commit -M ""
+git push
