@@ -9,7 +9,7 @@ env:
   - PRO_SPECIAL_BUILD='early-access'
 
 install:
-  - cd lab01
+  - cd lab1
   - java pro_wrapper.java version
 
 script:
