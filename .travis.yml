@@ -7,9 +7,11 @@ before_install:
 
 env: 
   - PRO_SPECIAL_BUILD='early-access'
-
+  - file=lab1
+  - file=lab2
+  
 install:
-  - cd lab1
+  - cd file
   - java pro_wrapper.java version
 
 script:
