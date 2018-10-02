@@ -13,8 +13,10 @@ matrix:
   -env: FILE=lab1
   -env: FILE=lab2
   
+  
 install:
   - cd $FILE
+  - pwd
   - java pro_wrapper.java version
 
 script:
