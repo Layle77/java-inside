@@ -15,9 +15,7 @@ matrix:
   
   
 install:
-  - echo $FOLDER
   - cd $FOLDER
-  - pwd
   - java pro_wrapper.java version
 
 script:
