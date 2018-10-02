@@ -12,6 +12,7 @@ matrix:
   include:
   -env: FILE=lab1
   -env: FILE=lab2
+  
 install:
   - cd $FILE
   - java pro_wrapper.java version
