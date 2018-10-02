@@ -7,11 +7,13 @@ before_install:
 
 env: 
   - PRO_SPECIAL_BUILD='early-access'
-  - file=lab1
-  - file=lab2
   
+matrix:
+  include:
+  -env: FILE=lab1
+  -env: FILE=lab2
 install:
-  - cd file
+  - cd $FILE
   - java pro_wrapper.java version
 
 script:
