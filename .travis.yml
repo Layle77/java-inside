@@ -10,12 +10,13 @@ env:
   
 matrix:
   include:
-  -env: FILE=lab1
-  -env: FILE=lab2
+  - env: FOLDER=lab1
+  - env: FOLDER=lab2
   
   
 install:
-  - cd $FILE
+  - echo $FOLDER
+  - cd $FOLDER
   - pwd
   - java pro_wrapper.java version
 
