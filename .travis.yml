@@ -5,14 +5,18 @@ jdk: openjdk11
 before_install:
   - unset _JAVA_OPTIONS
 
-env: 
-  - PRO_SPECIAL_BUILD='early-access'
-  
+
 matrix:
   include:
-  - env: FOLDER=lab1
-  - env: FOLDER=lab2
-  
+  - env: 
+    FOLDER=lab1
+    PRO_SPECIAL_BUILD='early-access' 
+  - env: 
+    FOLDER=lab2
+    PRO_SPECIAL_BUILD='early-access'
+  - env: 
+    FOLDER=lab3
+    PRO_SPECIAL_BUILD='early-access-amber' 
   
 install:
   - cd $FOLDER
