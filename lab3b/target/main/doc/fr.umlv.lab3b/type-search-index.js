@@ -1,1 +1,1 @@
-typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"fr.umlv.lab3b","l":"Main"}]
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"fr.umlv.lab3b","l":"HelloConciseMethod"},{"p":"fr.umlv.lab3b","l":"Main"}]

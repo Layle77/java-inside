@@ -17,6 +17,10 @@ resolver.
 //        "org.openjdk.jmh.generator=org.openjdk.jmh:jmh-generator-annprocess:1.20"
     )
 
+compiler.
+	sourceRelease(12).
+	rawArguments("--enable-preview")
+
 // compiler.
 //     rawArguments(
 //         "--processor-module-path", "deps"   // enable JMH annotation processor
@@ -24,13 +28,16 @@ resolver.
 
 docer.
     quiet(true).
-    link(uri("https://docs.oracle.com/javase/9/docs/api/"))
+    link(uri("https://docs.oracle.com/en/java/javase/11/docs/api/"))
    
 packager.
     modules(
         "fr.umlv.lab3b@1.0/fr.umlv.lab3b.Main"
     )   
     
+runner.
+	rawArguments("--enable-preview")
+
 run(resolver, modulefixer, compiler, tester, docer, packager, runner /*, perfer */)
 
 /exit
