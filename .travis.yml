@@ -8,13 +8,13 @@ before_install:
 
 matrix:
   include:
-  - env: 
+  - env:
     FOLDER=lab1
     PRO_SPECIAL_BUILD='early-access' 
-  - env: 
+  - env:
     FOLDER=lab2
     PRO_SPECIAL_BUILD='early-access'
-  - env: 
+  - env:
     FOLDER=lab3
     PRO_SPECIAL_BUILD='early-access-amber' 
   - env:
