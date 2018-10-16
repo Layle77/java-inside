@@ -7,7 +7,7 @@ public class Exemple1 {
 		var continuationScope = new ContinuationScope("hello1");
 	    Continuation suite = new Continuation(continuationScope, ()->{
 //	    	Continuation.yield(continuationScope);
-	    	System.out.println("hello");
+	    	System.out.println("hello Continuation");
 	    	});
 	    suite.run();
 	    suite.run();
