@@ -17,6 +17,9 @@ matrix:
   - env: 
     FOLDER=lab3
     PRO_SPECIAL_BUILD='early-access-amber' 
+  - env:
+    FOLDER=lab4
+    PRO_SPECIAL_BUILD='early-access-loom'
   
 install:
   - cd $FOLDER
