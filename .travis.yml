@@ -9,17 +9,13 @@ before_install:
 matrix:
   include:
   - env:
-    FOLDER=lab1
-    PRO_SPECIAL_BUILD='early-access' 
+    FOLDER=lab1 PRO_SPECIAL_BUILD='early-access' 
   - env:
-    FOLDER=lab2
-    PRO_SPECIAL_BUILD='early-access'
+    FOLDER=lab2 PRO_SPECIAL_BUILD='early-access'
   - env:
-    FOLDER=lab3
-    PRO_SPECIAL_BUILD='early-access-amber' 
+    FOLDER=lab3 PRO_SPECIAL_BUILD='early-access-amber' 
   - env:
-    FOLDER=lab4
-    PRO_SPECIAL_BUILD='early-access-loom'
+    FOLDER=lab4 PRO_SPECIAL_BUILD='early-access-loom'
   
 install:
   - cd $FOLDER
