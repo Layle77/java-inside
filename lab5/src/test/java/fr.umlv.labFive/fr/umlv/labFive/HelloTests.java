@@ -20,16 +20,18 @@ class HelloTests {
 	  
 	  Alien a = new Alien("Lambada",5);
 	  Alien a2 = new Alien("Spoutnik",48);
-	  
-	  System.out.println(Serializer.toJSON(a));
-	  System.out.println(Serializer.toJSON(a2));
+	  assertEquals(toJSON(p),Serializer.toJSON(p));
+	  assertEquals(toJSON(p2),Serializer.toJSON(p2));
+	  assertEquals(toJSON(a),Serializer.toJSON(a));
+	  assertEquals(toJSON(a2),Serializer.toJSON(a2));
 	 }
   
   
 
   
   
-  
+	
+	
   public class Person {
 	  private final String firstName;
 	  private final String lastName;
@@ -38,10 +40,11 @@ class HelloTests {
 	    this.firstName = Objects.requireNonNull(firstName);
 	    this.lastName = Objects.requireNonNull(lastName);
 	  }
-	  
+	  @JSONProperty
 	  public String getFirstName() {
 	    return firstName;
 	  }
+	  @JSONProperty
 	  public String getLastName() {
 	    return lastName;
 	  }
@@ -57,16 +60,30 @@ class HelloTests {
 	    this.planet = Objects.requireNonNull(planet);
 	    this.age = age;
 	  }
-
+	  @JSONProperty
 	  public String getPlanet() {
 	    return planet;
 	  }
-
+	  @JSONProperty(rename = "members")
 	  public int getAge() {
 	    return age;
 	  }
 	}
-  
+  public static String toJSON(Person person) {
+	    return
+	        "{\n" +
+	        "  \"firstName\": \"" + person.getFirstName() + "\"\n" +
+	        "  \"lastName\": \"" + person.getLastName() + "\"\n" +
+	        "}\n";
+	  }
+
+	  public static String toJSON(Alien alien) {
+	    return 
+	        "{\n" + 
+	        "  \"planet\": \"" + alien.getPlanet() + "\"\n" + 
+	        "  \"members\": \"" + alien.getAge() + "\"\n" + 
+	        "}\n";
+	  }
   
   
 }

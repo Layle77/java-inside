@@ -9,7 +9,7 @@ import static java.util.function.Predicate.not;
 
 public class Serializer {
 	
-	
+//getmethod renvoie un tableau de methode : tableau = mutable donc clone le tableau
 	
 	public static String toJSON(Object o) {
 		
@@ -19,10 +19,15 @@ public class Serializer {
 //				.map(method -> propertyName(method.getName())).collect(Collectors.joining());
 
 		
-		return Arrays.stream(o.getClass().getMethods())
+//		return "{\n"+Arrays.stream(o.getClass().getMethods())
+//		.filter(method -> method.getName().startsWith("get") && method.getParameterCount()==0)
+//		.filter(not(method -> method.getDeclaringClass() == Object.class && method.getName().equals("getClass")))
+//		.map(method -> methodToString(method,o)).collect(Collectors.joining("\n"))+"\n}\n";
+//		
+		return "{\n"+Arrays.stream(o.getClass().getMethods())
 		.filter(method -> method.getName().startsWith("get") && method.getParameterCount()==0)
-		.filter(not(method -> method.getDeclaringClass() == Object.class && method.getName().equals("getClass")))
-		.map(method -> methodToString(method,o)).collect(Collectors.joining(",\n"));
+		.filter(method -> method.isAnnotationPresent(JSONProperty.class))
+		.map(method -> methodToString(method,o)).collect(Collectors.joining("\n"))+"\n}\n";
 		
 	}
 	
@@ -49,8 +54,18 @@ public class Serializer {
 	
 	private static String methodToString(Method method,Object o) {
 		
-		return "{\n"+propertyName(method.getName())+": "+invoker(method,o)+"\n}";
+		return "  \""+getMethodName(method)+"\": \""+invoker(method,o)+"\"";
 		
+	}
+
+	private static String getMethodName(Method method) {
+		
+		var annotation = method.getAnnotation(JSONProperty.class) ;
+		
+		if(annotation.rename().isEmpty())
+			return propertyName(method.getName());
+		else
+			return annotation.rename() ;
 	}
 	
     private static String propertyName(String name) {
