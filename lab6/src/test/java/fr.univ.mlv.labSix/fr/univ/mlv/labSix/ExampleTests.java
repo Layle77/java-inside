@@ -1,5 +1,7 @@
 package fr.univ.mlv.labSix;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.MethodHandles;
 import java.lang.invoke.MethodHandles.Lookup;
@@ -94,6 +96,13 @@ public class ExampleTests {
 		System.out.println((int)finalTest.invokeExact("foo"));
 	}
 	
-	
-
+	@Test
+	public void stringSwitchTests() throws Throwable {
+	    var mh = Example.stringSwitch("foo", "bar", "bazz");
+	    assertEquals(0, (int)mh.invokeExact("foo"));
+	    assertEquals(1, (int)mh.invokeExact("bar"));
+	    assertEquals(-1, (int)mh.invokeExact("booze"));
+		
+		
+	}
 }
